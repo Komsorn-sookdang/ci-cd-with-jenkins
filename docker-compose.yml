@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+  backend-service:
+    container_name: backend-service
+    image: backend-service
+    # environment:
+    #   MONGODB_URI: ${MONGODB_URI}
+    # volumes:
+    #   - ./volumes/app/data:/data
+    #   - ./volumes/app/pdf:/pdf
+    #   - ./volumes/app/log:/log
+    #   - ./go-app:/app/cantab
+    build: .
+    ports:
+      - 8100:8100
+    networks:
+      - gate-way_my-net
+networks:
+  gate-way_my-net:
+    external: true
