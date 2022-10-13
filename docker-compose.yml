@@ -12,10 +12,10 @@ services:
     #   - ./volumes/app/log:/log
     #   - ./go-app:/app/cantab
     build: .
-    ports:
-      - 8100:8100
+    # ports:
+    #   - 8100:8100
     networks:
-      - gate-way_my-net
+      - ci-cd-with-jenkins-nginx_my-net
 networks:
-  gate-way_my-net:
+  ci-cd-with-jenkins-nginx_my-net:
     external: true
