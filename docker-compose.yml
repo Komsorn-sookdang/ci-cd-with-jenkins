@@ -15,7 +15,7 @@ services:
     # ports:
     #   - 8100:8100
     networks:
-      - ci-cd-with-jenkins-nginx_my-net
+      - nginx-network
 networks:
-  ci-cd-with-jenkins-nginx_my-net:
+  nginx-network:
     external: true
